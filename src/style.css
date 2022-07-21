@@ -4,22 +4,14 @@
     box-sizing: border-box;
 }
 
-#header{
-    background-color: aqua;
-    display: flex;
-    justify-content: space-between;
-    padding: 1.2rem 1rem;
-}
-
-.titulo{
-    font-size: 1.2em;
-    margin-left: 150px;
+#title{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2em;
+    margin: 25px;
 }
 
-#header a{
-    padding: 5px 100px;
-    text-decoration: none;
-    font-weight: bold;
+#responsive-navbar-nav{
+    font-size: 20px;
+    padding: 10px;
     color: black;
 }

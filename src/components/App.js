@@ -1,6 +1,6 @@
 import NavBar from "./NavBar"
 
-function App(){
+const App = () => {
     return(
         <>
             <NavBar/>
