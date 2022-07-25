@@ -2,7 +2,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import CartWidget from './CartWidget';
+import CartWidget from '../CartWidget/CartWidget';
 
 
 function CollapsibleExample() {
@@ -14,7 +14,9 @@ function CollapsibleExample() {
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
                         <Nav.Link href="#features">Inicio</Nav.Link>
-                        <Nav.Link href="#pricing">Productos</Nav.Link>
+                        <Nav.Link href="#pricing">Zapatillas</Nav.Link>
+                        <Nav.Link href="#pricing">Camisetas</Nav.Link>
+                        <Nav.Link href="#pricing">Pelotas</Nav.Link>
                         <NavDropdown title="Contacto" id="collasible-nav-dropdown">
                             <NavDropdown.Item href="#action/3.1">Quienes Somos?</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.2">
