@@ -1,8 +1,13 @@
 import React from 'react'
+import ItemCount from '../ItemCount/ItemCount'
 
 const CartWidget = () => {
   return (
-    <img src="../img/shop-cart.png" alt="" />
+    <>
+      <span className="material-symbols-outlined">
+      shopping_cart
+      </span>
+    </>
   )
 }
 
