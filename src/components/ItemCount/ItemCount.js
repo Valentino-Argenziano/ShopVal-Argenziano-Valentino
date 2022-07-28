@@ -5,18 +5,19 @@ import { Button } from '@mui/material';
 
 
 
-const ItemCount = () => {
-    const resultado = useState(0)
-    let contador = resultado [0]
-    const setContador = resultado[1]
+const ItemCount = ({initial,stock}) => {
+    const [contador, setContador]=useState(1);
     
 
     const aumentarContador = () => {
-        setContador(contador + 1)
+        contador < stock ? setContador (contador + 1 ) : console.log("Maximo alcanzado");
     }
 
     const disminuirContador = () => {
-        setContador(contador - 1)
+        
+        contador > initial ? setContador(contador - 1) : console.log("Minimo alcanzado");
+        
+        
     }
 
     const agregarCarrito = ()=>{
