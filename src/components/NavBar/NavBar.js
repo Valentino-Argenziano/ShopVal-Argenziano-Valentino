@@ -17,14 +17,6 @@ function CollapsibleExample() {
                         <Nav.Link href="#pricing">Zapatillas</Nav.Link>
                         <Nav.Link href="#pricing">Camisetas</Nav.Link>
                         <Nav.Link href="#pricing">Pelotas</Nav.Link>
-                        <NavDropdown title="Contacto" id="collasible-nav-dropdown">
-                            <NavDropdown.Item href="#action/3.1">Quienes Somos?</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.2">
-                                Direccion
-                            </NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.3">Consultas</NavDropdown.Item>
-                            <NavDropdown.Divider />
-                        </NavDropdown>
                     </Nav>
                     <Nav>
                         <CartWidget/>

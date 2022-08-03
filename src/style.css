@@ -17,6 +17,7 @@
 
 h2 {
     text-align: center;
+    padding-top: 120px;
 }
 
 .material-symbols-outlined {
@@ -45,3 +46,20 @@ h2 {
     margin-top: 20px;
     width: 70px;
 }
+
+.item {
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+    border-top: solid rgb(255, 251, 0) 3px;
+}
+
+.itemList {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5vh;
+}
+
+
