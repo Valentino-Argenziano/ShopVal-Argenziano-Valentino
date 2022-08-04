@@ -5,19 +5,25 @@ import ItemCount from '../ItemCount/ItemCount.js'
 import { products } from '../../assets/productos.js'
 import { ItemList } from '../ItemList/ItemList.js'
 import { customFetch } from '../../assets/customFetch.js'
+import { LinearProgress } from '@mui/material'
 
 
 const ItemListContainer = ({greeting1}) => {
     const[listProducts, setListProducts] = useState([])
+    const[loading,setLoading]=useState(false)
     useEffect(()=>{
         customFetch(products)
-        .then(data => setListProducts(data))
+        .then(data => {
+            setLoading(true)
+            setListProducts(data)
+        })
     },[])
 
 return (
     <>
     <h2>{greeting1}</h2>
-    <ItemList listProducts = {listProducts}/>
+    {!loading && <LinearProgress />}
+    {loading && <ItemList listProducts = {listProducts}/>}
     {/* <ItemCount stock="5" initial="1"/> */}
     </>
 )
