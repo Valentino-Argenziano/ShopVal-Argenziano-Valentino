@@ -6,6 +6,7 @@ import { products } from '../../assets/productos.js'
 import { ItemList } from '../ItemList/ItemList.js'
 import { customFetch } from '../../assets/customFetch.js'
 import { LinearProgress } from '@mui/material'
+import ItemDetailContainer from '../ItemDetailContainer/ItemDetailContainer.js'
 
 
 const ItemListContainer = ({greeting1}) => {

@@ -15,7 +15,7 @@ const Item = ({ product }) => {
                 component="img"
                 height="260"
                 image={product.image}
-                alt="Air-Force"
+                alt={product.name}
                 title={product.product}
             />
             <CardContent>
