@@ -3,7 +3,7 @@ export const products = [
         id: 1,
         image:"https://www.moov.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dw1d77fa19/products/NI_CJ1379-100/NI_CJ1379-100-1.JPG",
         product: "Air-Force 1",
-        description:"El zapato deportivo Air Force 1, lanzado al mercado en 1990 , es un producto de Nike Inc. Fue creado por el diseñador Riccardo Tisci, fue el primer calzado deportivo de Baloncesto lanzado por Nike que usa la Nike Air.",
+        description:"El zapato deportivo Air Force 1, lanzado al mercado en 1990 , es un producto de Nike Inc. Fue creado por el diseñador Riccardo Tisci, fue el primer calzado deportivo de Baloncesto lanzado por Nike Air.",
         category:"zapatillas",
         price:20000
     },
@@ -19,7 +19,7 @@ export const products = [
         id: 3,
         image:"https://www.dexter.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dwe5cfde82/products/AD_H57799/AD_H57799-1.JPG",
         product: "Al Rihla",
-        description:"El Adidas Al Rihla será el balón de fútbol oficial usado durante la Copa Mundial de 2022 realizada en Catar. Será el número 14 confeccionado por la compañía alemana de equipamiento deportivo Adidas.",
+        description:"El Adidas Al Rihla será el balón de fútbol oficial usado durante la Copa Mundial de 2022 en Catar. Será el número 14 confeccionado por la compañía alemana de equipamiento deportivo Adidas.",
         category:"pelotas",
         price:500
     }

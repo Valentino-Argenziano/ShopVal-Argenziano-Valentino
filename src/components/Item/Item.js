@@ -23,7 +23,8 @@ const Item = ({ product }) => {
                     {product.product}
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                    {product.description}
+                    {product.description} 
+                    " Precio: ${product.price}"
                 </Typography>
             </CardContent>
             <CardActions>

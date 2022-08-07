@@ -24,6 +24,7 @@ const ItemDetail = ({ listProducts }) => {
                     </Typography>
                     <Typography variant="body2" color="text.secondary">
                         {listProducts.description}
+                        " Precio: ${listProducts.price}"
                     </Typography>
                 </CardContent>
                 <CardActions>
