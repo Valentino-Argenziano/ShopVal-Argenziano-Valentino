@@ -27,11 +27,10 @@ const ItemDetail = ({ listProducts }) => {
                         " Precio: ${listProducts.price}"
                     </Typography>
                 </CardContent>
+                <ItemCount stock="5" initial="1"/>
                 <CardActions>
-                    <Button size="small">Compartir</Button>
-                    <Button size="small">Ver más</Button>
                 </CardActions>
-            </Card>
+            </Card> 
         </div>
     )
 }

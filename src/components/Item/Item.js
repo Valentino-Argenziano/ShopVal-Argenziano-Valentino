@@ -5,6 +5,7 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import {Link} from 'react-router-dom'
 
 
 const Item = ({ product }) => {
@@ -24,12 +25,11 @@ const Item = ({ product }) => {
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
                     {product.description} 
-                    " Precio: ${product.price}"
                 </Typography>
             </CardContent>
             <CardActions>
                 <Button size="small">Compartir</Button>
-                <Button size="small">Ver más</Button>
+                <Button  as={Link} to={`/detail/${product.id}`} size="small" className='button_item'>Ver más</Button>
             </CardActions>
         </Card>
         </div>
