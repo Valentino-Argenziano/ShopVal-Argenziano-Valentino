@@ -1,7 +1,6 @@
 import React from 'react'
 import {useState, useEffect } from 'react';
 import ItemDetail from '../ItemDetail/ItemDetail'
-import { Item } from '../Item/Item';
 import { LinearProgress } from '@mui/material'
 import { customFetch } from '../../assets/customFetch';
 import { products } from '../../assets/productos.js'

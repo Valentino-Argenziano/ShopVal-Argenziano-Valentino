@@ -1,6 +1,5 @@
 import React from 'react'
 import {useState, useEffect} from 'react'
-import ItemCount from '../ItemCount/ItemCount.js'
 import { products } from '../../assets/productos.js'
 import { ItemList } from '../ItemList/ItemList.js'
 import { customFetch } from '../../assets/customFetch.js'
@@ -18,7 +17,7 @@ const ItemListContainer = ({greeting1}) => {
         .then(data => {
             setLoading(true)
             if(id){
-                setListProducts(data.filter(item=>item.category==id))
+                setListProducts(data.filter(item=>item.category===id))
             }else{
                 setListProducts(data)
             }
