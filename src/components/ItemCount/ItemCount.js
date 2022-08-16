@@ -7,8 +7,9 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 
-const ItemCount = ({initial,stock}) => {
+const ItemCount = ({initial,stock,onAdd}) => {
     const [contador, setContador]=useState(1);
+    
     
 
     const aumentarContador = () => {
@@ -39,7 +40,7 @@ const ItemCount = ({initial,stock}) => {
     }
 
     const agregarCarrito = ()=>{
-
+        onAdd(contador)
     }
 
     return (
@@ -53,7 +54,7 @@ const ItemCount = ({initial,stock}) => {
         </div>
         <div className="itemCount_agregar">
         <Button variant="contained" color="warning" onClick={agregarCarrito}>
-                <p>Agregar al carrito</p>
+                <p>Agregar al carrito</p> 
         </Button>
         </div>
         </div>

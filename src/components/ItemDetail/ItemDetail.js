@@ -5,8 +5,13 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import ItemCount from '../ItemCount/ItemCount';
+import { useState } from 'react';
 
 const ItemDetail = ({ listProducts }) => {
+    const [numero, setNumero] = useState(0)
+    const onAdd = (num)=>{
+        setNumero(numero)
+    }
     return (
         <div className='itemDetail'>
             <Card className='cardShop' sx={{ maxWidth: 345 }} >
@@ -26,7 +31,7 @@ const ItemDetail = ({ listProducts }) => {
                         " Precio: ${listProducts.price}"
                     </Typography>
                 </CardContent>
-                <ItemCount stock="5" initial="1"/>
+                <ItemCount stock="5" initial="1" onAdd={onAdd}/>
                 <CardActions>
                 </CardActions>
             </Card> 
