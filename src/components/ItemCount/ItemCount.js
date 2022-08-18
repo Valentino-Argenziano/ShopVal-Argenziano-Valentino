@@ -3,13 +3,15 @@ import {useState} from 'react'
 import { Button } from '@mui/material';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import {Link} from 'react-router-dom'
 
 
 
 
 const ItemCount = ({initial,stock,onAdd}) => {
     const [contador, setContador]=useState(1);
-    
+    const [ open, setOpen ] = useState(false)
+
     
 
     const aumentarContador = () => {
@@ -41,6 +43,7 @@ const ItemCount = ({initial,stock,onAdd}) => {
 
     const agregarCarrito = ()=>{
         onAdd(contador)
+        setOpen(true)
     }
 
     return (
@@ -52,11 +55,19 @@ const ItemCount = ({initial,stock,onAdd}) => {
         <Button variant="contained" onClick={aumentarContador} className="botonContador2">+</Button>
         <ToastContainer />
         </div>
-        <div className="itemCount_agregar">
+        { !open ? (<div className="itemCount_agregar">
         <Button variant="contained" color="warning" onClick={agregarCarrito}>
                 <p>Agregar al carrito</p> 
         </Button>
-        </div>
+        </div>)
+        :
+        (<div className="itemCount__terminar">
+                <Link to="/cart">
+                    <Button variant="contained" color="primary" >
+                        <p>Terminar la compra</p>
+                    </Button>
+                </Link>
+            </div>) }
         </div>
         </>
     )

@@ -1,17 +1,20 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import ItemCount from '../ItemCount/ItemCount';
-import { useState } from 'react';
+import {contexto} from '../CartContext/CartContext'
 
 const ItemDetail = ({ listProducts }) => {
-    const [numero, setNumero] = useState(0)
-    const onAdd = (num)=>{
-        setNumero(numero)
+    const {addToCart} = useContext(contexto)
+    const onAdd = (contador)=>{
+        listProducts.cantidad = contador
+        addToCart(listProducts,contador)
     }
+
+    
     return (
         <div className='itemDetail'>
             <Card className='cardShop' sx={{ maxWidth: 345 }} >
@@ -20,11 +23,11 @@ const ItemDetail = ({ listProducts }) => {
                     height="260"
                     image={listProducts.image}
                     alt="Air-Force"
-                    title={listProducts.product}
+                    title={listProducts.name}
                 />
                 <CardContent>
                     <Typography gutterBottom variant="h5" component="div">
-                        {listProducts.product}
+                        {listProducts.name}
                     </Typography>
                     <Typography variant="body2" color="text.secondary">
                         {listProducts.description}

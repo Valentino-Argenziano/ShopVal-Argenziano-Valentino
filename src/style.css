@@ -38,14 +38,10 @@ h2 {
     justify-content: center;
 }
 
-.itemCount__agregar {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 20px;
-    width: 70px;
+a{
+    text-decoration: underline;
 }
+
 
 .item {
     display: flex;
@@ -62,7 +58,7 @@ h2 {
     margin-top: 5vh;
 }
 
-.itemDetail{
+.itemDetail {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -70,6 +66,70 @@ h2 {
     margin-top: 10vh;
 }
 
-.button_item{
+.button_item {
     text-decoration: none;
+}
+
+.cartWidget {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cartWidget>a {
+    text-decoration: none;
+    color: black;
+}
+
+.cart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart>h1 {
+    margin-bottom: 120px;
+}
+
+.cartItems {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cartItems__buttons>Button {
+    margin: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.cartItem {
+    display: flex;
+    width: 80%;
+    height: 120px;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+
+.cartItem>div {
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90px;
+}
+
+.cartItem__title>h3 {
+    width: 90px;
+}
+
+.cartItem__image>img {
+    object-fit: contain;
+    height: 100px;
+    width: 90px;
 }

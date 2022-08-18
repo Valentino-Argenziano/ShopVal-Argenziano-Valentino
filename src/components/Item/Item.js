@@ -17,11 +17,11 @@ const Item = ({ product }) => {
                 height="260"
                 image={product.image}
                 alt={product.name}
-                title={product.product}
+                title={product.name}
             />
             <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
-                    {product.product}
+                    {product.name}
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
                     {product.description} 
