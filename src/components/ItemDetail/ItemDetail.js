@@ -7,11 +7,10 @@ import Typography from '@mui/material/Typography';
 import ItemCount from '../ItemCount/ItemCount';
 import {contexto} from '../CartContext/CartContext'
 
-const ItemDetail = ({ listProducts }) => {
+const ItemDetail = ({listProducts}) => {
     const {addToCart} = useContext(contexto)
     const onAdd = (contador)=>{
-        listProducts.cantidad = contador
-        addToCart(listProducts,contador)
+        listProducts&&addToCart(listProducts,contador)
     }
 
     

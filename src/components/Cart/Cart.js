@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom';
 
 function Cart() {
     const { cart, clearCart, total } = useContext(contexto)
+    console.log(cart);
 
     return (
         <div className="cart">

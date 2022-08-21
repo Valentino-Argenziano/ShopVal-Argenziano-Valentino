@@ -21,27 +21,23 @@ function CartProvider( { children }) {
 
 
     function isInCart(id){
-        const item = cart.find(p => p.id === id)
-        if (item == undefined){
-            return false
-        }
-        else {
-            return true
-        }
+        const item = cart.find(p => p.id == id)
+        return item
     }
 
-    function addToCart(product, contador, id) {
-
-        if (isInCart(id)){
-            const oldProduct = cart.find(p => p.id == id)
-            const newQuantity = oldProduct.amount + contador
-            const newProduct = { id: oldProduct.id, name: oldProduct.name, image: oldProduct.image, price: oldProduct.price, amount: newQuantity}
-            const cartWithoutOld = cart.filter(product => product.id =! id)
-            const cartWithNew = [...cartWithoutOld, newProduct]
-            setCart(cartWithNew)            
+    function addToCart(product, contador) {
+        if (isInCart(product.id)){
+            const oldProduct = cart.find(p => p.id == product.id)
+            const cartWithoutOld = cart.filter(item => item.id !== product.id)
+            const newProduct = {...oldProduct}
+            newProduct.amount += contador
+            cartWithoutOld.push(newProduct)
+            setCart(cartWithoutOld)
         } else {
             const newItem = { id: product.id, name: product.name, image: product.image, price: product.price, amount: contador }
-            setCart([...cart, newItem]) 
+            const newCart = [...cart]
+            newCart.push(newItem)
+            setCart(newCart) 
         }
     }
 
@@ -60,7 +56,7 @@ function CartProvider( { children }) {
 
     return (
 
-            <Provider value ={{ cart, quantity, total, addToCart, eliminateFromCart, clearCart }}>
+            <Provider value ={{ cart, quantity, total, addToCart, eliminateFromCart, clearCart, isInCart}}>
                 { children }
             </Provider>
     )
