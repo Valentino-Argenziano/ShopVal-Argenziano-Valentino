@@ -47,7 +47,7 @@ function Cart() {
                 padding:"40px",
                 showConfirmButton:false
             }).then(function(){
-                window.location = "http://localhost:3000/"
+                window.location = "https://shop-val-argenziano-valentino.vercel.app/"
             })
         }
     }
