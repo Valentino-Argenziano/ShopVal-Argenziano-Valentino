@@ -37,6 +37,7 @@ function Cart() {
                 showConfirmButton:false
             })
         }else{
+            
             swal({
                 title:"Compra Exitosa!",
                 text:"Su compra ha sido finalizada, pronto le llegará el pedido.",
@@ -47,7 +48,6 @@ function Cart() {
                 showConfirmButton:false
             }).then(function(){
                 window.location = "http://localhost:3000/"
-                localStorage.clear()
             })
         }
     }
@@ -96,9 +96,10 @@ function Cart() {
             onChange={(e) => setPhone(e.target.value)} />
             <TextField id="standard-basic" label="Email" value={email} 
             onChange={(e) => setEmail(e.target.value)} />
-            <Button  onClick={submitOrder} variant="contained" color="primary">
+            <Link to={"/"}><Button  onClick={submitOrder} variant="contained" color="primary">
                     Finalizar!
                 </Button> 
+                </Link>
             </form>}
 
         </div>
