@@ -1,8 +1,6 @@
 import React from 'react'
 import {useState, useEffect} from 'react'
-import { products } from '../../assets/productos.js'
 import { ItemList } from '../ItemList/ItemList.js'
-import { customFetch } from '../../assets/customFetch.js'
 import { LinearProgress } from '@mui/material'
 import{useParams} from 'react-router-dom'
 import { db } from '../../Firebase/firebase.js'
@@ -20,7 +18,6 @@ const ItemListContainer = ({greeting1}) => {
 
         
         const productsCollection = collection(db, "products")
-        // const filtro = query(productsCollection, where("category","==",id))
         const consulta = getDocs(productsCollection)
 
         consulta.then(snapshot =>{

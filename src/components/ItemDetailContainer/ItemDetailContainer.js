@@ -2,8 +2,6 @@ import React from 'react'
 import {useState, useEffect } from 'react';
 import ItemDetail from '../ItemDetail/ItemDetail'
 import { LinearProgress } from '@mui/material'
-import { customFetch } from '../../assets/customFetch';
-import { products } from '../../assets/productos.js'
 import {useParams} from 'react-router-dom'
 import { db } from '../../Firebase/firebase.js'
 import { collection, getDoc, doc } from 'firebase/firestore'
